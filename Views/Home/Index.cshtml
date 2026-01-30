@@ -1,0 +1,116 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css_custom/homepage.css">
+    <style>
+        /* Slider Styles for Home Page */
+        .slider-container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slider-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            max-height: 400px;
+        }
+
+        .slider-nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .slider-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+    </style>
+}
+
+<div class="slider-container">
+    <div class="slider-wrapper">
+        <div class="slider-slide"><img src="~/assets/slider1.png" alt="Slide 1"></div>
+        <div class="slider-slide"><img src="~/assets/slider2.png" alt="Slide 2"></div>
+        <div class="slider-slide"><img src="~/assets/slider3.png" alt="Slide 3"></div>
+    </div>
+    <div class="slider-nav">
+        <div class="slider-dot active" onclick="goToSlide(0)"></div>
+        <div class="slider-dot" onclick="goToSlide(1)"></div>
+        <div class="slider-dot" onclick="goToSlide(2)"></div>
+    </div>
+</div>
+
+<div class="text-center" style="margin-top: 50px;">
+    <h1 class="display-4">Welcome to LearnValuate</h1>
+    <p>Your one-stop solution for learning and evaluation.</p>
+</div>
+
+@section Scripts {
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider-slide');
+        const dots = document.querySelectorAll('.slider-dot');
+        const wrapper = document.querySelector('.slider-wrapper');
+        const totalSlides = slides.length;
+
+        function updateSlider() {
+            if (wrapper) {
+                wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+                dots.forEach(dot => dot.classList.remove('active'));
+                if (dots[currentSlide]) {
+                    dots[currentSlide].classList.add('active');
+                }
+            }
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+            resetTimer();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        let slideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+        function resetTimer() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 3000);
+        }
+    </script>
+}

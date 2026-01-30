@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Dashboard - LearnValuate</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+   <link rel="stylesheet" href="css folder/dashboard.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<style>
+.stats-summary {
+  background: #f7f0ff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px #c39dfc;
+  border: 2px solid #c2a2f2;
+  margin: 40px 20px;
+  text-align: center;
+}
+
+.stats-summary h2 {
+  color: #4b0eb5;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.stat-items {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
+ grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.stat-box {
+  background: #fff;
+  padding: 20px 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px #d3bdf5;
+  border: 1px solid #c2a2f2;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 200px;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  background: #efe4ff;
+  box-shadow: 0 0 10px #b07efc;
+}
+
+.stat-box h3 {
+  font-size: 1.8rem;
+  color: #5d2bb5;
+  margin-bottom: 8px;
+}
+
+.stat-box p {
+  font-size: 1rem;
+  color: #5d2bb5;
+}
+
+
+
+
+</style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="navigation">
+      <ul>
+        <li class="static-link">
+          <a href="#" class="nav-link">
+            <span class="icon"><ion-icon name="planet-outline"></ion-icon></span>
+            <span class="title">LearnValuate</span>
+          </a>
+        </li>
+        <!-- <li><a href="user_dashboard.html" class="nav-link"><span class="icon"><ion-icon name="home-outline"></ion-icon></span><span class="title">Dashboard</span></a></li> -->
+     <li class="dropdown" id="dashboardDropdown">
+  <div class="dropdown-toggle">
+    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+    <span class="title">Users_Dashboard</span>
+    <span class="arrow">▼</span>
+  </div>
+  <ul class="dropdown-options">
+    <li><a href="student_dashboard.html" class="nav-link">Student Dashboard</a></li>
+    <li><a href="tutor_dashboard.html" class="nav-link">Tutor Dashboard</a></li>
+  </ul>
+</li>
+
+
+        <!-- <li><a href="courses.html" class="nav-link"><span class="icon"><ion-icon name="book-outline"></ion-icon></span><span class="title">Courses</span></a></li>
+        <li><a href="exams.html" class="nav-link"><span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span><span class="title">Exams</span></a></li>
+        <li><a href="pay.html" class="nav-link"><span class="icon"><ion-icon name="card-outline"></ion-icon></span><span class="title">Payment</span></a></li>
+        <li><a href="http://localhost/learnvaluate_cert/generate_certificate.php?user_id=4"  class="nav-link"><span class="icon"><ion-icon name="ribbon-outline"></ion-icon></span><span class="title">Certificate</span></a></li> -->
+        <!-- <li><a href="logout.html" class="nav-link"><span class="icon"><ion-icon name="log-out-outline"></ion-icon></span><span class="title">Logout</span></a></li> -->
+        <li><a href="homepage.html" class="nav-link"><span class="icon"><ion-icon name="megaphone-outline"></ion-icon></span><span class="title">About Us</span></a></li>
+    </ul>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
+        <!-- <div class="search"><input type="text" placeholder="Search Here"></div>
+        <div class="notification"><ion-icon name="notifications-outline"></ion-icon></div> -->
+        <div class="user"><img src="/assets/user-pic.JPG" alt="User"></div>
+      </div>
+
+      <!-- <div class="cardBox">
+        <a href="courses.html" class="card-link"> 
+        <div class="card">
+          <div>
+            <div class="numbers">6</div>
+            <div class="cardName">My Courses</div>
+          </div>
+          <div class="iconBox"><ion-icon name="book-outline"></ion-icon></div>
+        </div>
+        </a>
+        <a href="exams.html" class="card-link"> 
+        <div class="card">
+          <div>
+            <div class="numbers">2</div>
+            <div class="cardName">Upcoming Exams</div>
+          </div>
+          <div class="iconBox"><ion-icon name="newspaper-outline"></ion-icon></div>
+        </div>
+        </a>
+        <a href="pay.html" class="card-link"> 
+        <div class="card">
+          <div>
+            <div class="numbers">10</div>
+            <div class="cardName">Paid</div>
+          </div>
+          <div class="iconBox"><ion-icon name="card-outline"></ion-icon></div>
+        </div>
+        </a>
+        <a href="http://localhost/learnvaluate_cert/generate_certificate.php?user_id=4"  class="card-link"> 
+        <div class="card">
+          <div>
+            <div class="numbers">3</div>
+            <div class="cardName">Certificates</div>
+          </div>
+          <div class="iconBox"><ion-icon name="ribbon-outline"></ion-icon></div>
+        </div>
+        </a>
+      </div> -->
+
+      <!-- Remove this cardBox section entirely -->
+<!-- <div class="cardBox"> ... </div> -->
+
+<!-- Replace with new content -->
+<div class="stats-summary">
+  <h2>This Platform Summary</h2>
+  <div class="stat-items">
+    <div class="stat-box">
+      <h3>5+</h3>
+      <p>Students Enrolled</p>
+    </div>
+    <div class="stat-box">
+      <h3>4+</h3>
+      <p>Certified Tutors</p>
+    </div>
+    <div class="stat-box">
+      <h3>9+</h3>
+      <p>Active Courses</p>
+    </div>
+    <div class="stat-box">
+      <h3>2+</h3>
+      <p>Exams Conducted</p>
+    </div>
+    <!-- <div class="stat-box">
+      <h3>80+</h3>
+      <p>Live Classes This Month</p>
+    </div> -->
+    <!-- <div class="stat-box">
+      <h3>25+</h3>
+      <p>Students Online Now</p>
+    </div> -->
+    <div class="stat-box">
+      <h3>4.5 hrs</h3>
+      <p>Avg. Learning Hours/Day</p>
+    </div>
+    <div class="stat-box">
+      <h3>2+</h3>
+      <p>Assignments Submitted</p>
+    </div>
+  </div>
+</div>
+
+
+      <div class="charts">
+        <div class="charts-card">
+          <h2 class="chart-heading">Progress Overview</h2>
+          <canvas id="lineChart"></canvas>
+        </div>
+        <div class="charts-card">
+          <h2 class="chart-heading">Courses Distribution</h2>
+          <canvas id="doughnut"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="/assets/logo-pic.png" alt="LearnValuate Logo" height="55" width="55">
+        </div>
+        <div class="footer-text">
+          <p>© 2025 LearnValuate | All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+  <script src="chart1.js"></script>
+  <script src="chart2.js"></script>
+
+  <script>
+    let toggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    let main = document.querySelector('.main');
+    toggle.onclick = function () {
+      navigation.classList.toggle('active');
+      main.classList.toggle('active');
+    }
+    let navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navigation.classList.remove('active');
+          main.classList.remove('active');
+        }
+      });
+    });
+    let list = document.querySelectorAll('.navigation li');
+    function activeLink() {
+      list.forEach((item) => item.classList.remove('hovered'));
+      this.classList.add('hovered');
+    }
+    list.forEach((item) => item.addEventListener('mouseover', activeLink));
+
+    const currentPath = window.location.pathname.split('/').pop();
+
+document.querySelectorAll('.nav-link').forEach(link => {
+const linkPath = link.getAttribute('href').split('/').pop();
+if (linkPath === currentPath) {
+  link.classList.add('active');
+  link.parentElement.classList.add('hovered');
+}
+});
+
+const dropdownOptions = document.querySelectorAll("#mobileDropdown .dropdown-options li");
+const dashboardDropdown = document.getElementById("dashboardDropdown");
+const dashboardToggle = dashboardDropdown.querySelector(".dropdown-toggle");
+const dashboardOptions = dashboardDropdown.querySelectorAll(".dropdown-options li");
+
+// Function to clear all active states
+function clearActiveStates() {
+  dropdownOptions.forEach(li => li.classList.remove("active"));
+  dashboardOptions.forEach(li => li.classList.remove("active"));
+  dashboardDropdown.classList.remove("active", "open");
+}
+
+// Mobile Dropdown Options
+dropdownOptions.forEach(item => {
+  item.addEventListener("click", (e) => {
+    e.stopPropagation();
+    clearActiveStates();
+    item.classList.add("active");
+    mobileDropdown.classList.add("active");
+    mobileDropdown.classList.remove("open");
+
+    const method = item.dataset.method;
+    const name = method.charAt(0).toUpperCase() + method.slice(1);
+    formContainer.innerHTML = walletForm(name);
+  });
+});
+
+// Dashboard Dropdown Toggle
+dashboardToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const isOpen = dashboardDropdown.classList.contains("open");
+  clearActiveStates();
+  if (!isOpen) {
+    dashboardDropdown.classList.add("open");
+  }
+});
+
+// Dashboard Options
+dashboardOptions.forEach(item => {
+  item.addEventListener("click", (e) => {
+    e.stopPropagation();
+    clearActiveStates();
+    item.classList.add("active");
+    dashboardDropdown.classList.add("active");
+    dashboardDropdown.classList.remove("open");
+    // Optional: redirect handled by <a href="">
+  });
+});
+
+// Close dropdowns on outside click
+document.addEventListener("click", function (e) {
+  if (!e.target.closest(".dropdown")) {
+    clearActiveStates();
+  }
+});
+  </script>
+</body>
+</html>

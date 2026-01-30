@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sadah Anjum Shanto - Profile | LearnValuate</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="css folder/teachers.css">
+
+<style>
+    .tutor-profile {
+  padding: 40px;
+  background: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.profile-info h1 {
+  font-size: 28px;
+  color: #300776;
+}
+
+.profile-info p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #444;
+}
+
+.playlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.playlist-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 0 10px #c2a2f2;
+  border: 1px solid #a67de9;
+  text-align: center;
+}
+
+.playlist-card h3 {
+  color: #4b0eb5;
+}
+
+.playlist-card .btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #300776;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.playlist-card .btn:hover {
+  background: #5315be;
+}
+
+</style>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="navigation">
+      <ul>
+        <li class="static-link">
+          <a href="#" class="nav-link">
+            <span class="icon"><ion-icon name="planet-outline"></ion-icon></span>
+            <span class="title">LearnValuate</span>
+          </a>
+        </li>
+        <li><a href="dashboard.html" class="nav-link"><span class="icon"><ion-icon name="home-outline"></ion-icon></span><span class="title">Dashboard</span></a></li>
+        <li><a href="courses.html" class="nav-link"><span class="icon"><ion-icon name="book-outline"></ion-icon></span><span class="title">Courses</span></a></li>
+        <li><a href="exams.html" class="nav-link"><span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span><span class="title">Exam</span></a></li>
+        <li><a href="homepage.html" class="nav-link"><span class="icon"><ion-icon name="megaphone-outline"></ion-icon></span><span class="title">About Us</span></a></li>
+        <li><a href="teachers.html" class="nav-link"><span class="icon"><ion-icon name="arrow-back-outline"></ion-icon></span><span class="title">Back to Teachers</span></a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
+        <div class="user"><img src="assets/user-pic.JPG" alt="User"></div>
+      </div>
+
+      <!-- Tutor Profile Section -->
+      <section class="tutor-profile">
+        <div class="profile-header">
+          <img src="assets/shanto_mam.png" alt="Sadah Anjum Shanto" class="profile-img">
+          <div class="profile-info">
+            <h1>Sadah Anjum Shanto</h1>
+            <p><strong>Subject:</strong> Web Development</p>
+            <p><strong>Total Playlists:</strong> 0</p>
+            <p><strong>Total Videos:</strong> 3</p>
+            <p><strong>Joined:</strong> February 2025</p>
+          </div>
+        </div>
+
+        <div class="profile-body">
+          <h2 style="margin-bottom: 20px; margin-top: 70px;">Playlists by Sadah Anjum</h2>
+          <div class="playlist-container">
+            <div class="playlist-card">
+              <h3>HTML Crush Course</h3>
+              <p>Videos: 1</p>
+              <a href="https://www.youtube.com/embed/UB1O30fR-EE" class="btn">Watch Now</a>
+            </div>
+            <div class="playlist-card">
+              <h3>CSS Crush Course</h3>
+              <p>Videos: 1</p>
+              <a href="https://www.youtube.com/embed/yfoY53QXEnI" class="btn">Watch Now</a>
+            </div>
+            <div class="playlist-card">
+              <h3>JavaScript Course</h3>
+              <p>Videos: 1</p>
+              <a href="https://www.youtube.com/embed/W6NZfCO5SIk" class="btn">Watch Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="assets/logo-pic.png" alt="LearnValuate Logo" height="55" width="55">
+        </div>
+        <div class="footer-text">
+          <p>© 2025 LearnValuate | All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    let toggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    let main = document.querySelector('.main');
+    toggle.onclick = function () {
+      navigation.classList.toggle('active');
+      main.classList.toggle('active');
+    };
+  </script>
+</body>
+</html>

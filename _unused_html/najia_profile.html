@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Najia - Student Profile | LearnValuate</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="css folder/dashboard.css">
+  <style>
+    .profile-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border: 2px solid #c2a2f2;
+      box-shadow: 0 0 14px #c39dfc;
+      border-radius: 20px;
+      padding: 30px;
+    }
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .profile-header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #300776;
+    }
+    .profile-header h1 {
+      font-size: 28px;
+      color: #300776;
+    }
+    .profile-details {
+      margin-top: 25px;
+    }
+    .profile-details p {
+      font-size: 16px;
+      margin: 10px 0;
+      color: #333;
+    }
+    .btn-back {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #300776;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .btn-back:hover {
+      background: #5129bd;
+    }
+    .footer{
+        margin-top: 105px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="navigation">
+      <ul>
+        <li class="static-link">
+          <a href="#" class="nav-link">
+            <span class="icon"><ion-icon name="planet-outline"></ion-icon></span>
+            <span class="title">LearnValuate</span>
+          </a>
+        </li>
+        <li><a href="dashboard.html" class="nav-link"><span class="icon"><ion-icon name="home-outline"></ion-icon></span><span class="title">Dashboard</span></a></li>
+        <li><a href="students.html" class="nav-link"><span class="icon"><ion-icon name="school-outline"></ion-icon></span><span class="title">Students</span></a></li>
+        <li><a href="courses.html" class="nav-link"><span class="icon"><ion-icon name="book-outline"></ion-icon></span><span class="title">Courses</span></a></li>
+        <li><a href="homepage.html" class="nav-link"><span class="icon"><ion-icon name="megaphone-outline"></ion-icon></span><span class="title">About Us</span></a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
+        <div class="user"><img src="assets/user-pic.JPG" alt="User"></div>
+      </div>
+
+      <div class="profile-container">
+        <div class="profile-header">
+          <img src="assets/najia_image.png" alt="Shammi">
+          <h1>Najia</h1>
+        </div>
+        <div class="profile-details">
+          <p><strong>Email:</strong> najia@example.com</p>
+          <p><strong>Total Courses Enrolled:</strong> 2</p>
+          <p><strong>Tutorials Completed:</strong> 3</p>
+          <p><strong>Performance Level:</strong> Intermediate</p>
+          <p><strong>Certificate Earned:</strong> Get 1</p>
+        </div>
+        <a href="students.html" class="btn-back">← Back to Students</a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="assets/logo-pic.png" alt="LearnValuate Logo" height="55" width="55">
+        </div>
+        <div class="footer-text">
+          <p>© 2025 LearnValuate | All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    let toggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    let main = document.querySelector('.main');
+    toggle.onclick = function () {
+      navigation.classList.toggle('active');
+      main.classList.toggle('active');
+    };
+
+    students.forEach(student => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <h2>${student.name}</h2>
+    <p><strong>Tutorials:</strong> ${student.Tutorials}</p>
+    <p><strong>TotalCourse:</strong> ${student.TotalCourse}</p>
+    <a href="#" class="btn">View Details</a>
+  `;
+  container.appendChild(card);
+});
+
+  </script>
+
+</body>
+</html>

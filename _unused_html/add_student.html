@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="css folder/students.css">
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: #300776;
+  border-left: 10px solid #300776;
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 1000;
+  left: 0;
+}
+.navigation a.active {
+  background-color: #e0f2fe;
+  color: #2563eb;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+.navigation.active {
+  width: 60px;
+}
+.navigation ul {
+  width: 100%;
+}
+.navigation ul li {
+  list-style: none;
+  border-radius: 30px 0 0 30px;
+  transition: 0.3s;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background: var(--white);
+}
+.navigation ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  padding: 10px;
+  transition: 0.3s;
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: #300776;
+}
+.navigation ul li a .icon {
+  min-width: 60px;
+  text-align: center;
+  font-size: 1.5em;
+}
+.navigation ul li a .title {
+  white-space: nowrap;
+  font-size: large;
+  font-weight: 300;
+}
+/* Prevent hover background and color change */
+.navigation ul li.static-link:hover,
+.navigation ul li.static-link.hovered {
+  background: #300776; /* original background color */
+}
+
+.navigation ul li.static-link a:hover,
+.navigation ul li.static-link.hovered a {
+  color: var(--white); /* original text color */
+  cursor: default; /* show normal cursor */
+  pointer-events: none; /* disables all interaction including hover */
+}
+
+    h2 {
+       margin-top: 100px;
+       text-align: center;
+       font-size: 1.8rem;
+       color: #4b0eb5;
+       margin-bottom: 40px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 20px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    button:hover {
+      background: linear-gradient(45deg, #4b0cb8, #9f75e8);
+      border-radius: 5px;
+    }
+
+    table {
+      width: 90%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      color: #3e0999;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    .edit-btn {
+      background-color: #28a745;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+    }
+
+    @media (max-width: 600px) {
+      table, th, td {
+        font-size: 14px;
+      }
+    }
+     
+  
+.footer {
+  margin-top: 265px;
+  padding: 150px 10;
+  background: linear-gradient(45deg, #7234df, #ae84f8, #7e33ff);
+  color: #fff;
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+.footer-logo img{
+  height: 55px;
+  width: 55px;
+  position: absolute;
+  margin-left: auto;
+  left: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.footer-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers the combined block */
+  gap: 20px; /* space between logo and text */
+  /* flex-wrap: wrap;*/
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-text {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 400;
+} 
+
+@media (max-width: 768px) {
+  .navigation {
+    left: -300px;
+  }
+  .navigation.active {
+    left: 0;
+  }
+  .main {
+    left: 0;
+    width: 100%;
+  }
+  .main.active {
+    left: 300px;
+  }
+} 
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- <div class="wrapper">  -->
+      <div class="navigation">
+      <ul>
+        <li class="static-link">
+          <a href="#" class="nav-link">
+            <span class="icon"><ion-icon name="planet-outline"></ion-icon></span>
+            <span class="title">LearnValuate</span>
+          </a>
+        </li>
+        
+        <li><a href="dashboard.html" class="nav-link"><span class="icon"><ion-icon name="home-outline"></ion-icon></span><span class="title">Dashboard</span></a></li>
+        <li><a href="courses.html" class="nav-link"><span class="icon"><ion-icon name="book-outline"></ion-icon></span><span class="title">Courses</span></a></li>
+        <li><a href="exams.html" class="nav-link"><span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span><span class="title">Exam</span></a></li>
+        <!-- <li><a href="#" class="nav-link"><span class="icon"><ion-icon name="trophy-outline"></ion-icon></span><span class="title">Grading</span></a></li> -->
+        <li><a href="homepage.html" class="nav-link"><span class="icon"><ion-icon name="megaphone-outline"></ion-icon></span><span class="title">About Us</span></a></li>
+        <!-- <li><a href="#" class="nav-link"><span class="icon"><ion-icon name="settings-outline"></ion-icon></span><span class="title">Setting</span></a></li> -->
+        <!-- <li><a href="#" class="nav-link"><span class="icon"><ion-icon name="log-out-outline"></ion-icon></span><span class="title">Sign Out</span></a></li> -->
+      </ul>
+    </div>
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
+        <div class="user"><img src="assets/user-pic.JPG" alt="User"></div>
+    </div>
+
+  <h2>Student Management</h2>
+
+  <form id="studentForm">
+    <input type="text" id="name" placeholder="Enter Student Name" required>
+    <input type="email" id="email" placeholder="Enter Student Email" required>
+    <button type="submit" id="submitBtn">Add Student</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="studentList">
+      <!-- Student rows will appear here -->
+    </tbody>
+  </table>
+
+    <!-- Footer -->      
+     <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="assets/logo-pic.png" alt="LearnValuate Logo" height="55" width="55">
+        </div>
+        <div class="footer-text">
+          <p>© 2025 LearnValuate | All rights reserved.</p>
+        </div>
+    </footer>
+   </div> 
+   </div>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+ <script>
+ const studentForm = document.getElementById("studentForm");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const studentList = document.getElementById("studentList");
+
+  let students = JSON.parse(localStorage.getItem("students")) || [];
+  let editIndex = -1;
+
+  // Render students to table
+  function renderStudents() {
+    studentList.innerHTML = "";
+    students.forEach((student, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${student.name}</td>
+        <td>${student.email}</td>
+        <td>
+          <button class="edit-btn" onclick="editStudent(${index})">Edit</button>
+          <button class="delete-btn" onclick="deleteStudent(${index})">Delete</button>
+        </td>
+      `;
+      studentList.appendChild(row);
+    });
+  }
+
+ let toggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    let main = document.querySelector('.main');
+
+  toggle.onclick = function () {
+  navigation.classList.toggle('active');
+  main.classList.toggle('active');
+}
+let navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      navigation.classList.remove('active');
+      main.classList.remove('active');
+    }
+  });
+});
+let list = document.querySelectorAll('.navigation li');
+function activeLink() {
+  list.forEach((item) => item.classList.remove('hovered'));
+  this.classList.add('hovered');
+}
+
+  // Handle form submission
+  studentForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+
+    if (name === "" || email === "") return;
+
+    const student = { name, email };
+
+    if (editIndex === -1) {
+      students.push(student);
+    } else {
+      students[editIndex] = student;
+      editIndex = -1;
+    }
+
+    localStorage.setItem("students", JSON.stringify(students));
+    renderStudents();
+    studentForm.reset();
+  });
+
+  // Edit student
+  window.editStudent = function (index) {
+    const student = students[index];
+    nameInput.value = student.name;
+    emailInput.value = student.email;
+    editIndex = index;
+  };
+
+  // Delete student
+  window.deleteStudent = function (index) {
+    if (confirm("Are you sure you want to delete this student?")) {
+      students.splice(index, 1);
+      localStorage.setItem("students", JSON.stringify(students));
+      renderStudents();
+    }
+  };
+
+  // Initial render
+  renderStudents();
+</script>
+
+</body>
+</html>

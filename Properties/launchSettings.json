@@ -1,0 +1,29 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "workingDirectory": "H:\\WebC#",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5220",
+      "sqlDebugging": true,
+      "jsWebView2Debugging": true
+    },
+    "https": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7262;http://localhost:5220"
+    },
+    "Profile 1": {
+      "commandName": "Executable"
+    }
+  },
+  "$schema": "https://json.schemastore.org/launchsettings.json"
+}

@@ -1,0 +1,126 @@
+@model List<LearnValuate.Models.User>
+@{
+    ViewData["Title"] = "Student Management";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css_custom/students.css">
+    <style>
+    /* Copied from add_student.html */
+    h2 {
+       margin-top: 40px;
+       text-align: center;
+       font-size: 1.8rem;
+       color: #4b0eb5;
+       margin-bottom: 40px;
+    }
+
+    form#studentForm {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form#studentForm input[type="text"],
+    form#studentForm input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form#studentForm button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 20px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    form#studentForm button:hover {
+      background: linear-gradient(45deg, #4b0cb8, #9f75e8);
+      border-radius: 5px;
+    }
+
+    table {
+      width: 90%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      color: #3e0999;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    .edit-btn {
+      background-color: #28a745;
+      padding: 5px 10px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+      padding: 5px 10px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @@media (max-width: 600px) {
+      table, th, td {
+        font-size: 14px;
+      }
+    }
+    </style>
+}
+
+<h2>Student Management</h2>
+
+<form id="studentForm" method="post" action="@Url.Action("Create", "Student")">
+    <input type="text" name="name" placeholder="Enter Student Name" required>
+    <input type="email" name="email" placeholder="Enter Student Email" required>
+    <button type="submit" id="submitBtn">Add Student</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="studentList">
+        @if (Model != null)
+        {
+            foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.Username</td>
+                    <td>@student.Email</td>
+                    <td>
+                        <form method="post" action="@Url.Action("Delete", "Student")" style="display:inline; padding:0; box-shadow:none; background:none;">
+                            <input type="hidden" name="id" value="@student.Id" />
+                            <button type="submit" class="delete-btn" onclick="return confirm('Are you sure?')">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

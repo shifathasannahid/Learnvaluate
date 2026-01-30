@@ -1,0 +1,24 @@
+@model LearnValuate.Models.Course
+
+@{
+    ViewData["Title"] = "Enroll in " + Model.TutorName;
+}
+
+<h2>Enroll in @Model.TutorName</h2>
+
+<p>@Model.Description</p>
+
+<form asp-action="ProcessEnrollment" method="post">
+    <input type="hidden" name="courseId" value="@Model.Id" />
+    
+    <div>
+        <label>Select Payment Method:</label>
+        <select name="paymentMethod">
+            <option value="card">Credit/Debit Card</option>
+            <option value="bkash">bKash</option>
+            <option value="nagad">Nagad</option>
+        </select>
+    </div>
+    
+    <button type="submit">Confirm Enrollment</button>
+</form>

@@ -1,0 +1,36 @@
+@model List<LearnValuate.Models.User>
+@{
+    ViewData["Title"] = "Expert Tutors";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css_custom/teachers.css">
+}
+
+<section class="tutors-section">
+    <h1>Expert Tutors</h1>
+
+    <div class="cards-container">
+
+      <!-- Card 1 -->
+      <div class="card become-tutor">
+        <h2>Become a Tutor</h2>
+        <p>You are excellent work with us.</p>
+        <a href="@Url.Action("Create", "Teacher")" class="btn">Get Started</a>
+      </div>
+
+      @if (Model != null)
+      {
+          foreach (var teacher in Model)
+          {
+              <div class="card">
+                <h2>@teacher.Username</h2>
+                <p><strong>Email:</strong> @teacher.Email</p>
+                <!-- <p><strong>Total Videos:</strong> 3</p> -->
+                <a href="#" class="btn">View Details</a>
+              </div>
+          }
+      }
+
+    </div>
+</section>

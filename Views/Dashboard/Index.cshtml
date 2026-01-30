@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="cardBox">
+    <a href="@Url.Action("Index", "Student")" class="card-link"> 
+        <div class="card"><div><div class="numbers">@ViewBag.StudentCount</div><div class="cardName">Students</div></div><div class="iconBox"><ion-icon name="school-outline"></ion-icon></div></div>
+    </a>
+    <a href="@Url.Action("Index", "Teacher")" class="card-link"> 
+        <div class="card"><div><div class="numbers">@ViewBag.TutorCount</div><div class="cardName">Tutors</div></div><div class="iconBox"><ion-icon name="people-outline"></ion-icon></div></div>
+    </a>
+    <a href="@Url.Action("Index", "Course")" class="card-link"> 
+        <div class="card"><div><div class="numbers">@ViewBag.CourseCount</div><div class="cardName">Courses</div></div><div class="iconBox"><ion-icon name="book-outline"></ion-icon></div></div>
+    </a>
+    <a href="@Url.Action("Index", "Exam")" class="card-link">
+        <div class="card"><div><div class="numbers">@ViewBag.ExamCount</div><div class="cardName">Exams</div></div><div class="iconBox"><ion-icon name="newspaper-outline"></ion-icon></div></div>
+    </a>
+</div>
+
+<div class="charts">
+    <div class="charts-card"><h2 class="chart-heading">Students Improvement</h2><canvas id="lineChart"></canvas></div>
+    <div class="charts-card"><h2 class="chart-heading">Our Providing Courses</h2><canvas id="doughnut"></canvas></div>
+</div>
+
+@section Scripts {
+    <script src="~/js/chart1.js"></script>
+    <script src="~/js/chart2.js"></script>
+}

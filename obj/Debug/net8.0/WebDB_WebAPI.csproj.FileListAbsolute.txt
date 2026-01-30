@@ -1,0 +1,8 @@
+C:\Users\hp\source\repos\WebDB_WebAPI\WebDB_WebAPI\obj\Debug\net8.0\WebDB_WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\source\repos\WebDB_WebAPI\WebDB_WebAPI\obj\Debug\net8.0\WebDB_WebAPI.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\WebDB_WebAPI\WebDB_WebAPI\obj\Debug\net8.0\WebDB_WebAPI.AssemblyInfo.cs
+C:\Users\hp\source\repos\WebDB_WebAPI\WebDB_WebAPI\obj\Debug\net8.0\WebDB_WebAPI.csproj.CoreCompileInputs.cache
+H:\WebC#\DotNetProject\obj\Debug\net8.0\WebDB_WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+H:\WebC#\DotNetProject\obj\Debug\net8.0\WebDB_WebAPI.AssemblyInfoInputs.cache
+H:\WebC#\DotNetProject\obj\Debug\net8.0\WebDB_WebAPI.AssemblyInfo.cs
+H:\WebC#\DotNetProject\obj\Debug\net8.0\WebDB_WebAPI.csproj.CoreCompileInputs.cache

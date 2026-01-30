@@ -1,0 +1,313 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\WebC#\\DotNetProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\assets\\laravel-logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\assets\\laravel-logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\assets\\language.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\assets\\language.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\assets\\js-logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\assets\\js-logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\assets\\html-logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\assets\\html-logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\assets\\homayra_image.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\assets\\homayra_image.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\assets\\grading.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\assets\\grading.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\assets\\azgar_sir.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\assets\\azgar_sir.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\assets\\borshon_image.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\assets\\borshon_image.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\assets\\creativeskill.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\assets\\creativeskill.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\assets\\css-logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\assets\\css-logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\assets\\english-language-logo.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\assets\\english-language-logo.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\assets\\figma-logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\assets\\figma-logo.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\wwwroot\\assets\\nahid_image.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:wwwroot\\assets\\nahid_image.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\pay.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:pay.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|h:\\webc#\\dotnetproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AA41D87-938B-463B-AFC8-76D896F0358E}|LearnValuate.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T15:14:12.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-11T15:11:57.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "laravel-logo.png - PNG [612x408, 32 bit, PNG]",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\laravel-logo.png",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\laravel-logo.png",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\laravel-logo.png - PNG [612x408, 32 bit, PNG]",
+              "RelativeToolTip": "wwwroot\\assets\\laravel-logo.png - PNG [612x408, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-11T15:11:46.182Z",
+              "EditorCaption": " - PNG [612x408, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Language.png - PNG [740x463, 32 bit, PNG]",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\Language.png",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\Language.png",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\Language.png - PNG [740x463, 32 bit, PNG]",
+              "RelativeToolTip": "wwwroot\\assets\\Language.png - PNG [740x463, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-11T15:11:44.637Z",
+              "EditorCaption": " - PNG [740x463, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "js-logo.png - PNG [4000x4000, 32 bit, PNG]",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\js-logo.png",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\js-logo.png",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\js-logo.png - PNG [4000x4000, 32 bit, PNG]",
+              "RelativeToolTip": "wwwroot\\assets\\js-logo.png - PNG [4000x4000, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-11T15:11:41.892Z",
+              "EditorCaption": " - PNG [4000x4000, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "html-logo.png - PNG [512x512, 32 bit, PNG]",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\html-logo.png",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\html-logo.png",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\html-logo.png - PNG [512x512, 32 bit, PNG]",
+              "RelativeToolTip": "wwwroot\\assets\\html-logo.png - PNG [512x512, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-11T15:11:39.779Z",
+              "EditorCaption": " - PNG [512x512, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "homayra_image.jpg - Bitmap [612x612, 24 bit, JPG]",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\homayra_image.jpg",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\homayra_image.jpg",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\homayra_image.jpg - Bitmap [612x612, 24 bit, JPG]",
+              "RelativeToolTip": "wwwroot\\assets\\homayra_image.jpg - Bitmap [612x612, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-11T15:11:37.736Z",
+              "EditorCaption": " - Bitmap [612x612, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Grading.png - PNG [740x463, 32 bit, PNG]",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\Grading.png",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\Grading.png",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\Grading.png - PNG [740x463, 32 bit, PNG]",
+              "RelativeToolTip": "wwwroot\\assets\\Grading.png - PNG [740x463, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-11T15:11:35.265Z",
+              "EditorCaption": " - PNG [740x463, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "azgar_sir.png - PNG [611x611, 32 bit, PNG]",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\azgar_sir.png",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\azgar_sir.png",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\azgar_sir.png - PNG [611x611, 32 bit, PNG]",
+              "RelativeToolTip": "wwwroot\\assets\\azgar_sir.png - PNG [611x611, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-11T15:11:32.258Z",
+              "EditorCaption": " - PNG [611x611, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "borshon_image.png - PNG [611x564, 32 bit, PNG]",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\borshon_image.png",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\borshon_image.png",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\borshon_image.png - PNG [611x564, 32 bit, PNG]",
+              "RelativeToolTip": "wwwroot\\assets\\borshon_image.png - PNG [611x564, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-11T15:11:29.369Z",
+              "EditorCaption": " - PNG [611x564, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreativeSkill.png - PNG [740x463, 32 bit, PNG]",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\CreativeSkill.png",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\CreativeSkill.png",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\CreativeSkill.png - PNG [740x463, 32 bit, PNG]",
+              "RelativeToolTip": "wwwroot\\assets\\CreativeSkill.png - PNG [740x463, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-11T15:11:26.549Z",
+              "EditorCaption": " - PNG [740x463, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "css-logo.png - PNG [528x528, 32 bit, PNG]",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\css-logo.png",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\css-logo.png",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\css-logo.png - PNG [528x528, 32 bit, PNG]",
+              "RelativeToolTip": "wwwroot\\assets\\css-logo.png - PNG [528x528, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-11T15:11:24.864Z",
+              "EditorCaption": " - PNG [528x528, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "english-language-logo.jpg - Bitmap [626x626, 24 bit, JPG]",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\english-language-logo.jpg",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\english-language-logo.jpg",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\english-language-logo.jpg - Bitmap [626x626, 24 bit, JPG]",
+              "RelativeToolTip": "wwwroot\\assets\\english-language-logo.jpg - Bitmap [626x626, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-11T15:11:22.289Z",
+              "EditorCaption": " - Bitmap [626x626, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "figma-logo.png - PNG [600x600, 8 bit, PNG]",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\figma-logo.png",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\figma-logo.png",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\figma-logo.png - PNG [600x600, 8 bit, PNG]",
+              "RelativeToolTip": "wwwroot\\assets\\figma-logo.png - PNG [600x600, 8 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-11T15:11:20.073Z",
+              "EditorCaption": " - PNG [600x600, 8 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "nahid_image.png - PNG [498x501, 32 bit, PNG]",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\nahid_image.png",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\nahid_image.png",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\wwwroot\\assets\\nahid_image.png - PNG [498x501, 32 bit, PNG]",
+              "RelativeToolTip": "wwwroot\\assets\\nahid_image.png - PNG [498x501, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-11T15:11:12.281Z",
+              "EditorCaption": " - PNG [498x501, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "pay.css",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\pay.css",
+              "RelativeDocumentMoniker": "pay.css",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\pay.css",
+              "RelativeToolTip": "pay.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-11T05:23:47.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-11T05:23:26.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "H:\\WebC#\\DotNetProject\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "H:\\WebC#\\DotNetProject\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA4AAAAAMzMzMzMbwBkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T05:06:35.661Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

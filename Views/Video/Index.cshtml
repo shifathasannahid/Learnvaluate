@@ -1,0 +1,148 @@
+@model IEnumerable<LearnValuate.Models.Video>
+@{
+    ViewData["Title"] = "Videos";
+    int courseId = ViewBag.CourseId != null ? (int)ViewBag.CourseId : 0;
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css_custom/videos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    .add-course-form {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 30px;
+      background: #f7f0ff;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(48, 7, 118, 0.2);
+      border: 2px solid #8c4bed;
+    }
+    
+    .add-course-form h2 {
+      text-align: center;
+      color: #5a2ccf;
+      margin-bottom: 20px;
+    }
+    
+    .add-course-form input,
+    .add-course-form textarea,
+    .add-course-form select {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+    
+    .add-course-form input:focus,
+    .add-course-form textarea:focus,
+    .add-course-form select:focus {
+      outline: none;
+      border-color: #7131df;
+    }
+    
+    .add-course-form button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #874fe9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .add-course-form button:hover {
+      background: linear-gradient(45deg, #5552ec, #a174ef);
+      border-radius: 20px;
+    }
+    </style>
+}
+
+<h2 class="page-title">All Playlist Videos</h2>
+
+<!-- Add Video Form -->
+<form action="@Url.Action("Create", "Video")" method="post" class="add-course-form">
+  <input type="hidden" name="CourseId" value="@courseId" />
+  <h2 style="margin-bottom: 15px;">Add New Video</h2>
+  <label for="title">Video Title:</label>
+  <input type="text" name="Title" placeholder="Enter video title" required>
+  <label for="youtube_url">YouTube Embed URL:</label>
+  <input type="text" name="VideoUrl" required placeholder="e.g., https://www.youtube.com/embed/VIDEO_ID">
+  <button type="submit">Add Video</button>
+</form>
+
+<div class="video-card-container">
+    @if (Model != null && Model.Any())
+    {
+        int i = 1;
+        foreach (var item in Model)
+        {
+            <div class="video-card">
+                <div class="video-number">#@i.ToString("D2")</div>
+                <iframe src="@item.VideoUrl" frameborder="0" allowfullscreen></iframe>
+                <p>@item.Title</p>
+                <div class="video-actions">
+                    <button class="like-btn" data-video-id="@item.Id"><i class="fa fa-thumbs-up"></i> Like</button>
+                    <textarea class="feedback" id="comment-@item.Id" placeholder="Leave a comment..."></textarea>
+                    <button class="submit-comment-btn" data-video-id="@item.Id"><i class="fa fa-paper-plane"></i> Submit</button>
+                    <div class="submitted-comment" id="msg-@item.Id"></div>
+                </div>
+            </div>
+            i++;
+        }
+    }
+    else
+    {
+        <p>No videos found for this course.</p>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelectorAll('.submit-comment-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const videoId = this.getAttribute('data-video-id');
+                const comment = document.getElementById('comment-' + videoId).value;
+                
+                // AJAX call to SubmitFeedback
+                fetch('@Url.Action("SubmitFeedback", "Video")', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `videoId=${videoId}&isLiked=false&comment=${encodeURIComponent(comment)}`
+                })
+                .then(response => {
+                    if(response.ok) {
+                         document.getElementById('msg-' + videoId).innerText = "Comment submitted!";
+                    }
+                });
+            });
+        });
+        
+         document.querySelectorAll('.like-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const videoId = this.getAttribute('data-video-id');
+                
+                fetch('@Url.Action("SubmitFeedback", "Video")', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `videoId=${videoId}&isLiked=true&comment=`
+                })
+                .then(response => {
+                    if(response.ok) {
+                         alert("Liked!");
+                    }
+                });
+            });
+        });
+    </script>
+}

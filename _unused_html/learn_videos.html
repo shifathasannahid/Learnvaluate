@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Tutorials - LearnValuate</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css folder/videos.css">
+
+</head>
+<body>
+  <div class="container">
+        
+    <!-- Sidebar -->
+        <div class="navigation">
+          <ul>
+            <li class="static-link">
+              <a href="#" class="nav-link">
+                <span class="icon"><ion-icon name="planet-outline"></ion-icon></span>
+                <span class="title">LearnValuate</span>
+              </a>
+            </li>
+
+            <li><a href="student_dashboard.html" class="nav-link"><span class="icon"><ion-icon name="home-outline"></ion-icon></span><span class="title">Student Dashboard</span></a></li>
+            <li><a href="learn_courses.html" class="nav-link"><span class="icon"><ion-icon name="book-outline"></ion-icon></span><span class="title">Courses</span></a></li>
+            <li><a href="get_exams.html" class="nav-link"><span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span><span class="title">Exams</span></a></li>
+            <!-- <li><a href="#" class="nav-link"><span class="icon"><ion-icon name="trophy-outline"></ion-icon></span><span class="title">Grading</span></a></li> -->
+            <li><a href="learn_videos.html" class="nav-link"><span class="icon"><ion-icon name="logo-youtube"></ion-icon></span><span class="title">Videos</span></a></li>
+            <li><a href="homepage.html" class="nav-link"><span class="icon"><ion-icon name="megaphone-outline"></ion-icon></span><span class="title">About Us</span></a></li>
+            <!-- <li><a href="#" class="nav-link"><span class="icon"><ion-icon name="settings-outline"></ion-icon></span><span class="title">Setting</span></a></li> -->
+            <!-- <li><a href="login-reg.html" class="nav-link"><span class="icon"><ion-icon name="log-out-outline"></ion-icon></span><span class="title">Sign Out</span></a></li> -->
+          </ul>
+        </div>
+        <!-- Main menu -->
+        <div class="main">
+          <div class="topbar">
+            <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
+            <!-- <div class="search">
+            <ion-icon name="search-outline" class="search-icon"></ion-icon>
+            <input type="text" id="searchInput" placeholder="Search Here" autocomplete="off" />
+            <div id="searchResults"></div>
+            </div>
+            <div class="notification"><ion-icon name="notifications-outline"></ion-icon></div> -->
+            <div class="user"><img src="assets/user-pic.JPG" alt="User"></div>
+          </div>
+
+      <h2 class="page-title">All Playlist Videos</h2>
+
+      <div class="video-card-container">
+        <!-- Repeat for 6 cards -->
+     <div class="video-card">
+  <div class="video-number">#01</div>
+  <iframe src="https://www.youtube.com/embed/UB1O30fR-EE" frameborder="0" allowfullscreen></iframe>
+  <p>HTML Tutorial Part-1</p>
+  <div class="video-actions">
+    <button class="like-btn" data-video-id="1"><i class="fa fa-thumbs-up"></i> Like</button>
+    <textarea class="feedback" placeholder="Leave a comment..."></textarea>
+    <button class="submit-comment-btn" data-video-id="1"><i class="fa fa-paper-plane"></i> Submit</button>
+    <div class="submitted-comment"></div>
+  </div>
+</div>
+
+        <!-- Copy & change video source & part text for #02 to #06 -->
+        <!-- You can update the src with different videos -->
+        <div class="video-card"><div class="video-number">#02</div><iframe src="https://www.youtube.com/embed/yfoY53QXEnI" frameborder="0" allowfullscreen></iframe><p>CSS Tutorial Part-1</p><div class="video-actions"><button class="like-btn" data-video-id="2"><i class="fa fa-thumbs-up"></i> Like</button><textarea class="feedback" placeholder="Leave a comment..."></textarea><button class="submit-comment-btn" data-video-id="2"><i class="fa fa-paper-plane"></i> Submit</button><div class="submitted-comment"></div></div></div>
+        <div class="video-card"><div class="video-number">#03</div><iframe src="https://www.youtube.com/embed/W6NZfCO5SIk" frameborder="0" allowfullscreen></iframe><p>JS Tutorial Part-1</p><div class="video-actions"><button class="like-btn" data-video-id="3"><i class="fa fa-thumbs-up"></i> Like</button><textarea class="feedback" placeholder="Leave a comment..."></textarea><button class="submit-comment-btn" data-video-id="3"><i class="fa fa-paper-plane"></i> Submit</button><div class="submitted-comment"></div></div></div>
+        <div class="video-card"><div class="video-number">#04</div><iframe src="https://www.youtube.com/embed/bMknfKXIFA8" frameborder="0" allowfullscreen></iframe><p>React.js Tutorial Part-1</p><div class="video-actions"><button class="like-btn" data-video-id="4"><i class="fa fa-thumbs-up"></i> Like</button><textarea class="feedback" placeholder="Leave a comment..."></textarea><button class="submit-comment-btn" data-video-id="4"><i class="fa fa-paper-plane"></i> Submit</button><div class="submitted-comment"></div></div></div>
+        <div class="video-card"><div class="video-number">#05</div><iframe src="https://www.youtube.com/embed/OK_JCtrrv-c" frameborder="0" allowfullscreen></iframe><p>PHP Tutorial Part-1</p><div class="video-actions"><button class="like-btn" data-video-id="5"><i class="fa fa-thumbs-up"></i> Like</button><textarea class="feedback" placeholder="Leave a comment..."></textarea><button class="submit-comment-btn" data-video-id="5"><i class="fa fa-paper-plane"></i> Submit</button><div class="submitted-comment"></div></div></div>
+        <div class="video-card"><div class="video-number">#06</div><iframe src="https://www.youtube.com/embed/ImtZ5yENzgE" frameborder="0" allowfullscreen></iframe><p>Laravel Tutorial Part-1</p><div class="video-actions"><button class="like-btn" data-video-id="6"><i class="fa fa-thumbs-up"></i> Like</button><textarea class="feedback" placeholder="Leave a comment..."></textarea><button class="submit-comment-btn" data-video-id="6"><i class="fa fa-paper-plane"></i> Submit</button><div class="submitted-comment"></div></div></div>
+      </div>
+      </div>
+      <!-- Success Message Box -->
+     <div id="successMessage" style="display:none; background-color:#d4edda; color:#155724; padding:10px; margin:10px 0; border:1px solid #c3e6cb; border-radius:5px;">
+      Payment Successful! Thank you.
+     </div>
+       
+      <!-- Footer -->      
+     <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="assets/logo-pic.png" alt="LearnValuate Logo" height="55" width="55">
+        </div>
+        <div class="footer-text">
+          <p>© 2025 LearnValuate | All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script>
+  // Sidebar toggle
+  let toggle = document.querySelector('.toggle');
+  let navigation = document.querySelector('.navigation');
+  let main = document.querySelector('.main');
+
+  toggle.onclick = function () {
+    navigation.classList.toggle('active');
+    main.classList.toggle('active');
+  };
+
+  // Collapse sidebar on link click (mobile view)
+  let navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        navigation.classList.remove('active');
+        main.classList.remove('active');
+      }
+    });
+  });
+
+  // Sidebar hover effect
+  let list = document.querySelectorAll('.navigation li');
+  function activeLink() {
+    list.forEach((item) => item.classList.remove('hovered'));
+    this.classList.add('hovered');
+  }
+
+
+  // Handle Like Button Click
+  document.querySelectorAll('.like-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const videoId = button.getAttribute('data-video-id');
+      button.innerHTML = '<i class="fa fa-thumbs-up"></i> Liked';
+      button.style.backgroundColor = '#28a745'; // Optional: Change color on like
+      button.disabled = true; // Optional: Prevent multiple likes
+      console.log('Liked video ID:', videoId);
+    });
+  });
+document.querySelectorAll('.submit-comment-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const videoId = button.getAttribute('data-video-id');
+    const parent = button.closest('.video-card');
+    const comment = parent.querySelector('.feedback').value;
+    const isLiked = parent.querySelector('.like-btn').innerText.includes("Liked") ? 1 : 0;
+
+    fetch('submit_feedback.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `video_id=${videoId}&is_liked=${isLiked}&comment=${encodeURIComponent(comment)}`
+    })
+    .then(response => response.text())
+    .then(data => {
+      if (data.includes("Success")) {
+        parent.querySelector('.submitted-comment').innerText = "✅ Comment saved!";
+      } else {
+        parent.querySelector('.submitted-comment').innerText = "❌ Failed to save!";
+      }
+    })
+    .catch(error => {
+      parent.querySelector('.submitted-comment').innerText = "❌ Error occurred!";
+    });
+  });
+});
+
+  </script>
+</body>
+</html>

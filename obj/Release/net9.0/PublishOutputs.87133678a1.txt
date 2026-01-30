@@ -1,0 +1,13 @@
+H:\WebC#\DotNetProject\obj\Release\net9.0\PubTmp\Out\LearnValuate.exe
+H:\WebC#\DotNetProject\obj\Release\net9.0\PubTmp\Out\appsettings.Development.json
+H:\WebC#\DotNetProject\obj\Release\net9.0\PubTmp\Out\appsettings.json
+H:\WebC#\DotNetProject\obj\Release\net9.0\PubTmp\Out\LearnValuate.dll
+H:\WebC#\DotNetProject\obj\Release\net9.0\PubTmp\Out\LearnValuate.runtimeconfig.json
+H:\WebC#\DotNetProject\obj\Release\net9.0\PubTmp\Out\LearnValuate.pdb
+H:\WebC#\DotNetProject\obj\Release\net9.0\PubTmp\Out\BCrypt.Net-Next.dll
+H:\WebC#\DotNetProject\obj\Release\net9.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+H:\WebC#\DotNetProject\obj\Release\net9.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+H:\WebC#\DotNetProject\obj\Release\net9.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
+H:\WebC#\DotNetProject\obj\Release\net9.0\PubTmp\Out\MySqlConnector.dll
+H:\WebC#\DotNetProject\obj\Release\net9.0\PubTmp\Out\Pomelo.EntityFrameworkCore.MySql.dll
+H:\WebC#\DotNetProject\obj\Release\net9.0\PubTmp\Out\LearnValuate.deps.json

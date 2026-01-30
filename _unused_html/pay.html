@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="pay.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="payment-container">
+      <div class="payment-methods">
+        <h3>Payment methods</h3>
+        <ul id="paymentOptions">
+          <li class="active" data-method="card"><span>💳</span> Payment by card</li>
+          <li data-method="bank"><span>🏦</span> Internet banks</li>
+          <li class="dropdown" id="mobileDropdown">
+            <div class="dropdown-toggle">
+              <span>📱</span> Mobile Payment
+              <span class="arrow">▼</span>
+            </div>
+            <ul class="dropdown-options">
+              <li data-method="bkash">Bkash</li>
+              <li data-method="nagad">Nagad</li>
+              <li data-method="rocket">Rocket</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Dynamic Form Container -->
+      <div class="payment-form" id="formContainer"></div>
+
+      <div class="order-info">
+        <h3>Order information</h3>
+        <p><strong>Order description</strong><br />Course Payment</p>
+        <div class="card-icons">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color/48/000000/amex.png" />
+          <img src="https://img.icons8.com/color/48/000000/discover.png" />
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>© 2025 LearnValuate | All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    const formContainer = document.getElementById("formContainer");
+    const paymentOptions = document.querySelectorAll("#paymentOptions > li");
+    const dropdownOptions = document.querySelectorAll(".dropdown-options li");
+    const mobileDropdown = document.getElementById("mobileDropdown");
+
+    // ✅ Get course_id from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedCourseId = urlParams.get("course_id");
+
+    // ✅ Handle error if no course selected
+    if (!selectedCourseId) {
+      formContainer.innerHTML = "<p style='color:red;'>❌ No course selected. Please return to course page.</p>";
+      throw new Error("No course selected.");
+    }
+
+    // ✅ Card Form HTML
+    const cardForm = `
+      <form action="pay.php" method="POST">
+        <input type="hidden" name="method" value="card" />
+        <input type="hidden" name="course" value="${selectedCourseId}" />
+
+        <div class="card-icons">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color/48/000000/amex.png" />
+          <img src="https://img.icons8.com/color/48/000000/discover.png" />
+        </div>
+
+        <label>Card number</label>
+        <input type="text" name="card_number" placeholder="Card number" required />
+        <div class="row">
+          <div>
+            <label>Expiry date</label>
+            <input type="text" name="expiry" placeholder="MM/YY" required />
+          </div>
+          <div>
+            <label>CVV</label>
+            <input type="text" name="cvv" placeholder="CVV" required />
+          </div>
+        </div>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="example@email.com" required />
+        <button type="submit">PAY NOW</button>
+      </form>
+    `;
+
+    // ✅ Wallet Form Generator
+    const walletForm = (provider) => `
+      <form action="pay.php" method="POST">
+        <input type="hidden" name="method" value="${provider}" />
+        <input type="hidden" name="course" value="${selectedCourseId}" />
+
+        <label>${provider} Number</label>
+        <input type="text" name="phone" placeholder="01XXXXXXXXX" required />
+        <label>Transaction ID</label>
+        <input type="text" name="transaction_id" placeholder="TX12345..." required />
+        <label>Email</label>
+        <input type="email" name="email" placeholder="example@email.com" required />
+        <button type="submit">PAY NOW</button>
+      </form>
+    `;
+
+    function clearActiveStates() {
+      paymentOptions.forEach(li => li.classList.remove("active"));
+      dropdownOptions.forEach(li => li.classList.remove("active"));
+    }
+
+    // ✅ Card method
+    paymentOptions.forEach(option => {
+      option.addEventListener("click", () => {
+        if (option.classList.contains("dropdown")) {
+          option.classList.toggle("open");
+          return;
+        }
+
+        clearActiveStates();
+        option.classList.add("active");
+
+        const method = option.dataset.method;
+        if (method === "card") {
+          formContainer.innerHTML = cardForm;
+        } else {
+          formContainer.innerHTML = `<p style="color:#3c0071;">Selected method not available.</p>`;
+        }
+      });
+    });
+
+    // ✅ Mobile wallet methods
+    dropdownOptions.forEach(item => {
+      item.addEventListener("click", (e) => {
+        e.stopPropagation();
+        clearActiveStates();
+        item.classList.add("active");
+        mobileDropdown.classList.add("active");
+        mobileDropdown.classList.remove("open");
+
+        const method = item.dataset.method;
+        formContainer.innerHTML = walletForm(method.charAt(0).toUpperCase() + method.slice(1));
+      });
+    });
+
+    // ✅ Close dropdown if clicked outside
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".dropdown")) {
+        mobileDropdown.classList.remove("open");
+      }
+    });
+
+    // ✅ Load default form on page load
+    formContainer.innerHTML = cardForm;
+  </script>
+</body>
+</html>

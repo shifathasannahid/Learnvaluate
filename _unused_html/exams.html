@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exam Section - LearnValuate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css folder/exams.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Sidebar -->
+    <nav class="navigation">
+      <ul>
+        <li class="static-link">
+          <a href="#" class="nav-link">
+            <span class="icon"><ion-icon name="planet-outline"></ion-icon></span>
+            <span class="title">LearnValuate</span>
+          </a>
+        </li>
+        
+        <li><a href="dashboard.html" class="nav-link"><span class="icon"><ion-icon name="home-outline"></ion-icon></span><span class="title">Admin Dashboard</span></a></li>
+        <li><a href="courses.html" class="nav-link"><span class="icon"><ion-icon name="book-outline"></ion-icon></span><span class="title">Courses</span></a></li>
+        <li><a href="exams.html" class="nav-link"><span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span><span class="title">Exam</span></a></li>
+        <li><a href="homepage.html" class="nav-link"><span class="icon"><ion-icon name="megaphone-outline"></ion-icon></span><span class="title">About Us</span></a></li>
+        <!-- <li><a href="#" class="nav-link"><span class="icon"><ion-icon name="settings-outline"></ion-icon></span><span class="title">Setting</span></a></li> -->
+        <!-- <li><a href="#" class="nav-link"><span class="icon"><ion-icon name="log-out-outline"></ion-icon></span><span class="title">Sign Out</span></a></li> -->
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
+        <!-- <div class="search">
+        <ion-icon name="search-outline" class="search-icon"></ion-icon>
+        <input type="text" id="searchInput" placeholder="Search Here" autocomplete="off" />
+        <div id="searchResults"></div>
+        </div> -->
+        <!-- <div class="notification"><ion-icon name="notifications-outline"></ion-icon></div> -->
+        <div class="user"><img src="assets/user-pic.JPG" alt="User"></div>
+      </div>
+
+      <section class="tutors-section">
+        <h1>Exam Section</h1>
+        <div class="cards-container">
+
+          <div class="card">
+            <h2>Assignment</h2>
+            <p><strong>View and submit your class assignments with due dates, instructions, and file upload options all in one place.</strong></p>
+            <a href="https://forms.gle/Q3Z4TT59MFYyJPyq7" class="btn">View Assignment</a>
+          </div>
+
+          <div class="card">
+            <h2>MCQ</h2>
+            <p><strong>Test your knowledge with multiple-choice quizzes – get instant feedback and track your progress.</strong></p>
+            <a href="https://forms.gle/4BYriHBEgHqdTACV6" class="btn">View MCQ</a>
+          </div>
+          
+          <div class="card">
+            <h3>After Finishing Your Exam</h3>
+            <div class="button-group">
+              <button class="btn1">View Grade</button>
+              <a href="http://localhost/learnvaluate_cert/generate_certificate.php?user_id=4"  class="btn1">Add Certificate</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->      
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="assets/logo-pic.png" alt="LearnValuate Logo" height="55" width="55">
+          </div>
+          <div class="footer-text">
+            <p>© 2025 LearnValuate | All rights reserved.</p>
+          </div>
+      </footer>
+  </div>
+
+  <script>
+    const toggle = document.querySelector('.toggle');
+    const navigation = document.querySelector('.navigation');
+    const main = document.querySelector('.main');
+
+    toggle.onclick = () => {
+      navigation.classList.toggle('active');
+      main.classList.toggle('active');
+    };
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navigation.classList.remove('active');
+          main.classList.remove('active');
+        }
+      });
+    });
+
+    document.querySelectorAll('.navigation li').forEach(item => {
+      item.addEventListener('mouseover', function () {
+        document.querySelectorAll('.navigation li').forEach(el => el.classList.remove('hovered'));
+        this.classList.add('hovered');
+      });
+    });
+
+    const currentPath = window.location.pathname.split("/").pop(); // e.g., "courses.html"
+
+const navigationLinks = document.querySelectorAll(".navigation a");
+
+navigationLinks.forEach(link => {
+  const linkPath = link.getAttribute("href").split("/").pop(); // e.g., "courses.html"
+
+  if (linkPath === currentPath) {
+    link.classList.add("active");
+  }
+});
+  </script>
+</body>
+</html>

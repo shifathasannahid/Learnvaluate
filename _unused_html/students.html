@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expert Students - LearnValuate</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="css folder/students.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="navigation">
+      <ul>
+        <li class="static-link">
+          <a href="#" class="nav-link">
+            <span class="icon"><ion-icon name="planet-outline"></ion-icon></span>
+            <span class="title">LearnValuate</span>
+          </a>
+        </li>
+        
+        <li><a href="dashboard.html" class="nav-link"><span class="icon"><ion-icon name="home-outline"></ion-icon></span><span class="title">Admin Dashboard</span></a></li>
+        <li><a href="courses.html" class="nav-link"><span class="icon"><ion-icon name="book-outline"></ion-icon></span><span class="title">Courses</span></a></li>
+        <li><a href="exams.html" class="nav-link"><span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span><span class="title">Exam</span></a></li>
+        <!-- <li><a href="#" class="nav-link"><span class="icon"><ion-icon name="trophy-outline"></ion-icon></span><span class="title">Grading</span></a></li> -->
+        <li><a href="homepage.html" class="nav-link"><span class="icon"><ion-icon name="megaphone-outline"></ion-icon></span><span class="title">About Us</span></a></li>
+        <!-- <li><a href="#" class="nav-link"><span class="icon"><ion-icon name="settings-outline"></ion-icon></span><span class="title">Setting</span></a></li> -->
+        <!-- <li><a href="#" class="nav-link"><span class="icon"><ion-icon name="log-out-outline"></ion-icon></span><span class="title">Sign Out</span></a></li> -->
+      </ul>
+    </div>
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
+        <div class="user"><img src="assets/user-pic.JPG" alt="User"></div>
+    </div>
+
+    <section class="tutors-section">
+        <h1>Student List</h1>
+    
+        <div class="cards-container">
+          <!-- Card 1 -->
+          <div class="card become-tutor">
+            <h2>Join As Student</h2>
+            <p>Hopefully You are learning and improving with us.</p>
+            <a href="add_student.html" class="btn">Get Started</a>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class="card">
+            <h2>Shammi</h2>
+            <p><strong>Tutorials:</strong> 2</p>
+            <p><strong>Total Course:</strong> 3</p>
+             <a href="shammi_profile.html" class="btn1">View Details</a>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class="card">
+            <h2>Najia</h2>
+            <p><strong>Tutorials:</strong> 3</p>
+            <p><strong>Total Course:</strong> 2</p>
+           <a href="najia_profile.html" class="btn1">View Details</a>
+          </div>
+    
+        </div>
+      </section>     
+      </div>
+
+       <!-- Footer -->      
+     <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="assets/logo-pic.png" alt="LearnValuate Logo" height="55" width="55">
+        </div>
+        <div class="footer-text">
+          <p>© 2025 LearnValuate | All rights reserved.</p>
+        </div>
+    </footer>
+   </div> 
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    let toggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    let main = document.querySelector('.main');
+
+  toggle.onclick = function () {
+  navigation.classList.toggle('active');
+  main.classList.toggle('active');
+}
+let navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      navigation.classList.remove('active');
+      main.classList.remove('active');
+    }
+  });
+});
+let list = document.querySelectorAll('.navigation li');
+function activeLink() {
+  list.forEach((item) => item.classList.remove('hovered'));
+  this.classList.add('hovered');
+}
+list.forEach((item) => item.addEventListener('mouseover', activeLink));
+
+const students = [
+  { name: "Homayra", Tutorials: 3, TotalCourse: 6, link: "homayra_profile.html" },
+  { name: "Nahid", Tutorials: 1, TotalCourse: 2, link: "nahid_profile.html" },
+  { name: "Borshon", Tutorials: 2, TotalCourse: 1, link: "borshon_profile.html" },
+];
+
+const container = document.querySelector('.cards-container');
+
+students.forEach(student => {
+  const card = document.createElement('div');
+  card.className = 'card';
+
+  card.innerHTML = `
+    <h2>${student.name}</h2>
+    <p><strong>Tutorials:</strong> ${student.Tutorials}</p>
+    <p><strong>Total Course:</strong> ${student.TotalCourse}</p>
+    <a href="${student.link}" class="btn1">View Details</a>
+  `;
+
+  container.appendChild(card);
+});
+
+</script>
+</body>
+</html>

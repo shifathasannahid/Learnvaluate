@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expert Tutors - LearnValuate</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="css folder/teachers.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="navigation">
+      <ul>
+        <li class="static-link">
+          <a href="#" class="nav-link">
+            <span class="icon"><ion-icon name="planet-outline"></ion-icon></span>
+            <span class="title">LearnValuate</span>
+          </a>
+        </li>
+        
+        <li><a href="dashboard.html" class="nav-link"><span class="icon"><ion-icon name="home-outline"></ion-icon></span><span class="title">Admin Dashboard</span></a></li>
+        <li><a href="courses.html" class="nav-link"><span class="icon"><ion-icon name="book-outline"></ion-icon></span><span class="title">Courses</span></a></li>
+        <li><a href="exams.html" class="nav-link"><span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span><span class="title">Exam</span></a></li>
+        <!-- <li><a href="#" class="nav-link"><span class="icon"><ion-icon name="trophy-outline"></ion-icon></span><span class="title">Grading</span></a></li> -->
+        <li><a href="homepage.html" class="nav-link"><span class="icon"><ion-icon name="megaphone-outline"></ion-icon></span><span class="title">About Us</span></a></li>
+        <!-- <li><a href="#" class="nav-link"><span class="icon"><ion-icon name="settings-outline"></ion-icon></span><span class="title">Setting</span></a></li> -->
+        <!-- <li><a href="#" class="nav-link"><span class="icon"><ion-icon name="log-out-outline"></ion-icon></span><span class="title">Sign Out</span></a></li> -->
+      </ul>
+    </div>
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
+        <!-- <div class="search">
+        <ion-icon name="search-outline" class="search-icon"></ion-icon>
+        <input type="text" id="searchInput" placeholder="Search Here" autocomplete="off" />
+        <div id="searchResults"></div>
+        </div>
+        <div class="notification"><ion-icon name="notifications-outline"></ion-icon></div> -->
+        <div class="user"><img src="assets/user-pic.JPG" alt="User"></div>
+    </div>
+
+  <section class="tutors-section">
+    <h1>Expert Tutors</h1>
+
+    <div class="cards-container">
+
+      <!-- Card 1 -->
+      <div class="card become-tutor">
+        <h2>Become a Tutor</h2>
+        <p>You are excellent work with us.</p>
+        <a href="add_tutor.html" class="btn">Get Started</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <h2>Sadah Anjum Shanto</h2>
+        <p><strong>Playlist:</strong> 0</p>
+        <p><strong>Total Videos:</strong> 3</p>
+        <a href="shanto_mam_profile.html" class="btn">View Details</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <h2>Ali Azgar</h2>
+        <p><strong>Playlist:</strong> 0</p>
+        <p><strong>Total Videos:</strong> 2</p>
+        <a href="azgar_sir_profile.html" class="btn">View Details</a>
+      </div>
+
+    </div>
+  </section>
+  </div>
+   <!-- Footer -->      
+   <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="assets/logo-pic.png" alt="LearnValuate Logo" height="55" width="55">
+      </div>
+      <div class="footer-text">
+        <p>© 2025 LearnValuate | All rights reserved.</p>
+      </div>
+  </footer>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    let toggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    let main = document.querySelector('.main');
+
+  toggle.onclick = function () {
+  navigation.classList.toggle('active');
+  main.classList.toggle('active');
+}
+let navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      navigation.classList.remove('active');
+      main.classList.remove('active');
+    }
+  });
+});
+let list = document.querySelectorAll('.navigation li');
+function activeLink() {
+  list.forEach((item) => item.classList.remove('hovered'));
+  this.classList.add('hovered');
+}
+list.forEach((item) => item.addEventListener('mouseover', activeLink));
+
+  const tutors = [
+    { name: "Ms. Sabiha Firdaus", playlist: 0, videos: 1, profileLink: "sabiha_mam_profile.html" }, 
+    { name: "Md. Masudul Islam", playlist: 1, videos: 1, profileLink: "masudul_sir_profile.html" },
+
+  ];
+
+  const container = document.querySelector('.cards-container');
+
+  tutors.forEach(tutor => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    card.innerHTML = `
+      <h2>${tutor.name}</h2>
+      <p><strong>Playlist:</strong> ${tutor.playlist}</p>
+      <p><strong>Total Videos:</strong> ${tutor.videos}</p>
+      <a href="${tutor.profileLink}" class="btn">View Details</a>
+    `;
+
+    container.appendChild(card);
+  });
+  </script>
+
+</body>
+</html>

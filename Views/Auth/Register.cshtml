@@ -1,0 +1,104 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn_&_SignUp</title>
+    <link rel="stylesheet" href="~/css_custom/login-reg.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+    <!--Login & Register Form-->
+    <div class="container">
+        <div class="curved-shape"></div>
+        <div class="curved-shape2"></div>
+        <div class="form-box Login"> 
+            <h2 class="animation" style="--D:0; --S:21;">Login</h2>
+            <form action="@Url.Action("Login", "Auth")" method="POST" id="login-form">
+                @if (ViewBag.Error != null)
+                {
+                    <p style="color: red; text-align: center;">@ViewBag.Error</p>
+                }
+                <div class="input-box animation" style="--D:1; --S:22;">
+                    <input type="text" name="email" placeholder="Email" id="email" required>
+                    <label for="">Email</label>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box animation" style="--D:2; --S:23;">
+                    <input type="password"  name="password" placeholder="Password" id="password" required>
+                    <label for="">Password</label>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="input-box animation" style="--D:3; --S:24;">
+                   <button class="btn" type="submit">Login</button>
+                </div>
+                <br>
+                <div class="regi-link animation" style="--D:4; --S:25;">
+                    <p id="error-msg">Don't have an account ? <a href="#" class="SignUpLink"> Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="info-content Login">
+            <h2 class="animation" style="--D:0; --S:20;">WELCOME <br>to Our!</h2>
+            <p class="animation" style="--D:1; --S:21;"><b>LearnValuate</b> Site.</p>
+        </div>
+
+        <div class="form-box Register"> 
+            <h2 class="animation" style="--li:17; --S:0;">Register</h2>
+            <form action="@Url.Action("Register", "Auth")" method="POST" id="register-form">
+                 @if (!ViewData.ModelState.IsValid)
+                {
+                    <div style="color: red; text-align: center;">
+                        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                        {
+                            <p>@error.ErrorMessage</p>
+                        }
+                    </div>
+                }
+                <div class="input-box animation" style="--li:18; --S:1;">
+                    <input type="text" name="username" placeholder="Username" id="reg-username" required>
+                    <label for="">Username</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box animation" style="--li:18; --S:1;">
+                    <input type="email" name="email" placeholder="Email" id="reg-email" required>
+                    <label for="">Email</label>
+                    <i class='bx bxs-envelope' ></i>
+                </div>
+                <div class="input-box animation" style="--li:19; --S:2;">
+                    <input type="password" name="password" placeholder="Password" id="reg-password" required>
+                    <label for="">Password</label>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="input-box animation" style="--li:20; --S:3;">
+                   <button class="btn" type="submit">Register</button>
+                </div>
+                <br>
+                <div class="regi-link animation" style="--li:21; --S:4;">
+                    <p id="register-error-msg">Already have an account ? <a href="#" class="SignInLink"> Sign In</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="info-content Register">
+            <h2 class="animation" style="--li:17; --S:0;">WELCOME BACK!</h2>
+            <p class="animation" style="--li:18; --S:1;"><b>LearnValuate</b> Site.</p>
+        </div>
+    </div>
+    <script src="~/js/login-reg.js"></script>
+    @if (ViewData.ModelState.ErrorCount > 0 && Context.Request.Path.Value.Contains("Register"))
+    {
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                 const container = document.querySelector('.container');
+                 if(container) container.classList.add('active');
+            });
+        </script>
+    }
+</body>
+</html>

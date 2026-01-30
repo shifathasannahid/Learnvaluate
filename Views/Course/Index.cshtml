@@ -1,0 +1,106 @@
+@model IEnumerable<LearnValuate.Models.Course>
+@{
+    ViewData["Title"] = "All Courses";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css_custom/courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+       .add-course-form {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #f7f0ff;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(48, 7, 118, 0.2);
+      border: 2px solid #8c4bed;
+    }
+    
+    .add-course-form input,
+    .add-course-form textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+    
+    .course-lock {
+      margin-top: 10px;
+      font-size: 18px;
+      text-align: center;
+    }
+    
+    .course-button.disabled {
+      background-color: #ccc;
+      pointer-events: none;
+      color: #666;
+      cursor: not-allowed;
+    }
+    
+    .add-course-form input:focus,
+    .add-course-form textarea:focus {
+      outline: none;
+      border-color: #7131df;
+    }
+    
+    .add-course-form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    
+    .add-course-form button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #874fe9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .add-course-form button:hover {
+      background: linear-gradient(45deg, #5552ec, #a174ef);
+      border-radius: 20px;
+    }
+    </style>
+}
+
+<h1>All Courses</h1>
+
+<!-- Course Add Form -->
+<form action="@Url.Action("Create", "Course")" method="POST" enctype="multipart/form-data" class="add-course-form">
+  <h2 style="margin-bottom: 15px;">Add New Course</h2>
+  <input type="text" name="TutorName" placeholder="Tutor Name" required>
+  <input type="file" name="logo_file" accept="image/*" required>
+  <textarea name="Description" placeholder="Course Description" required></textarea>
+  <button type="submit">Add Course</button>
+</form>
+
+<div class="courses-container">
+    @if (Model != null && Model.Any())
+    {
+        foreach (var item in Model)
+        {
+            <div class="course-card">
+                <div class="course-title">@item.TutorName</div>
+                <div class="course-icons"><img src="~/uploads/@item.LogoFile" alt="Course Logo" style="max-width: 100px; max-height: 100px;"></div>
+                <div class="course-description">@item.Description</div>
+                <a href="@Url.Action("Enroll", "Enrollment", new { courseId = item.Id })" class="course-button">Enroll Now</a>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No courses found. Add one above!</p>
+    }
+</div>
+
+<button class="view-all-btn">View All</button>

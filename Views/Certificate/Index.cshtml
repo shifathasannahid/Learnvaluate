@@ -1,0 +1,10 @@
+@model LearnValuate.Models.Certificate
+
+<h2>Certificate</h2>
+
+<div style="border: 5px solid black; padding: 20px; text-align: center;">
+    <h1>Certificate of Completion</h1>
+    <h3>This is to certify that</h3>
+    <h2>@Model.UserName</h2>
+    <p>Has completed the course on @Model.DateIssued.ToShortDateString()</p>
+</div>

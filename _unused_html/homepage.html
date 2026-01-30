@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>homepage - LearnValuate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css folder/homepage.css" />
+    <script src="homepage.js"></script>
+    
+  
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: #350d7b">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="">
+           <img src="assets/Logo Main.png" alt="LearnValuate Logo" style="height: 50px;"></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home" style="color: white">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#demos" style="color: white">Demos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq" style="color: white">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="user_dashboard.html" style="color: white">User Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" style="color: white">Contact</a>
+            </li>
+            <li class="nav-item"> 
+              <button class="btn" type="button" onclick="window.location.href='login-reg.html'" style="background-color: #9a5cf6; color: white">
+                Login
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Slider -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/slider1.png" class="d-block w-100" alt="Slide 1" />
+        </div>
+        <div class="carousel-item">
+          <img src="assets/slider2.png" class="d-block w-100" alt="Slide 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="assets/slider3.png" class="d-block w-100" alt="Slide 3" />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="container mt-5" id="demos">
+      <h2>Provides Demo</h2>
+      <div class="row">
+        <!-- Web Development Courses Card -->
+        <div class="col-md-4 mb-4">
+          <div class="card" style="border: 1px solid #350d7b">
+            <img src="assets/Web Dev.png"card-img-top" alt="Web Development" />
+            <div class="card-body">
+              <h5 class="card-title text-center" style="color: #350d7b">
+                Web Development Courses
+              </h5>
+              <p class="card-text">
+                Learn how to build and design websites with modern tools and
+                techniques.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Creative Skill Courses Card -->
+        <div class="col-md-4 mb-4">
+          <div class="card" style="border: 1px solid #350d7b">
+            <img src="assets/CreativeSkill.png" class="card-img-top" alt="Creative Skills" />
+            <div class="card-body">
+              <h5 class="card-title text-center" style="color: #350d7b">
+                Creative Skill Courses
+              </h5>
+              <p class="card-text">
+                Unlock your creative potential with courses in design, art, and
+                more.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Language & Communication Courses Card -->
+        <div class="col-md-4 mb-4">
+          <div class="card" style="border: 1px solid #350d7b">
+            <img
+              src="assets/Language.png"
+              class="card-img-top"
+              alt="Language & Communication"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center" style="color: #350d7b">
+                Language & Communication Courses
+              </h5>
+              <p class="card-text">
+                Improve your communication skills and learn new languages
+                effectively.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Multiple Exam Types Card -->
+        <div class="col-md-4 mb-4">
+          <div class="card" style="border: 1px solid #350d7b">
+            <img src="assets/Multiple Exam.png" class="card-img-top" alt="Exam Types" />
+            <div class="card-body">
+              <h5 class="card-title text-center" style="color: #350d7b">
+                Multiple Exam Types
+              </h5>
+              <p class="card-text">
+                Prepare for various exam formats with our flexible exam options.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Assignment Submission Card -->
+        <div class="col-md-4 mb-4">
+          <div class="card" style="border: 1px solid #350d7b">
+            <img
+              src="assets/Assignment.png"
+              class="card-img-top"
+              alt="Assignment Submission"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center" style="color: #350d7b">
+                Assignment Submission
+              </h5>
+              <p class="card-text">
+                Easily submit assignments and track your progress online.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Auto & Manual Grading Card -->
+        <div class="col-md-4 mb-4">
+          <div class="card" style="border: 1px solid #350d7b">
+            <img src="assets/Grading.png" class="card-img-top" alt="Grading" />
+            <div class="card-body">
+              <h5 class="card-title text-center" style="color: #350d7b">
+                Auto & Manual Grading
+              </h5>
+              <p class="card-text">
+                Get quick feedback with auto-grading or personalized manual
+                grading options.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FAQ -->
+    <div class="faq-header" id="faq">FAQs</div>
+    <div class="faq-container">
+        <!-- <div class="faq-title">Most common questions about our services</div> -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(1)">What is the Smart E-learning & Exam Management System?<span>+</span></div>
+            <div class="faq-answer" id="faq-answer-1">Our platform offers a comprehensive learning experience with interactive courses, smart 
+                exam tools, and real-time progress tracking to help students and educators succeed.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(2)">Who can use this platform? <span>+</span></div>
+            <div class="faq-answer" id="faq-answer-2">Students, educators, and institutions looking for a reliable online learning and exam solution 
+                can use our platform.
+            </div>
+        
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(3)">Are the courses free or paid?<span>+</span></div>
+            <div class="faq-answer" id="faq-answer-3">We offer both free and paid courses. You can filter courses based on your preference.
+
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(4)"> Will I receive a certificate after completing a course?<span>+</span></div>
+            <div class="faq-answer" id="faq-answer-4"> Yes, upon successful completion of a course and final exam, Then you’ll receive a certificate.
+                
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(5)"> What payment methods are accepted?<span>+</span></div>
+            <div class="faq-answer" id="faq-answer-5"> We accept payments via credit/debit cards, bKash, Nagad.
+                
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+      <div class="footer-column footer-logo">
+          <img src="assets/logo-pic.png" alt="LearnValuate">
+       
+      </div>
+      <div class="footer-column">
+          <h3>Company</h3>
+          <a href="#">Contact Us</a>
+          <a href="#">Our Services</a>
+          <a href="#">Why Choose Us</a>
+      </div>
+      <div class="footer-column">
+          <h3>Other Links</h3>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+      </div>
+      <div class="footer-column contact-info">
+          <h3>Contact Info</h3>
+          <p><img src="location-icon.png" alt="">1st Floor, House-10, Road-4, Block-H, Section-2, Mirpur, Dhaka-1216</p>
+          <!-- <p class="email"><img src="email-icon.png" alt="">contact@learnvaluate.com</p> -->
+      </div>
+  </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

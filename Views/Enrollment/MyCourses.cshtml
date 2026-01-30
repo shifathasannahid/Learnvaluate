@@ -1,0 +1,25 @@
+@model IEnumerable<LearnValuate.Models.Enrollment>
+
+@{
+    ViewData["Title"] = "My Courses";
+}
+
+<h2>My Courses</h2>
+
+@if (Model.Any())
+{
+    <ul>
+        @foreach (var enrollment in Model)
+        {
+            <li>
+                <a href="@Url.Action("Index", "Video", new { courseId = enrollment.CourseId })">
+                    @enrollment.Course.TutorName
+                </a>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>You have not enrolled in any courses yet.</p>
+}

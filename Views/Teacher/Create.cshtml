@@ -1,0 +1,126 @@
+@model List<LearnValuate.Models.User>
+@{
+    ViewData["Title"] = "Tutor Management";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css_custom/students.css">
+    <style>
+    /* Copied from add_tutor.html */
+    h2 {
+       margin-top: 40px;
+       text-align: center;
+       font-size: 1.8rem;
+       color: #4b0eb5;
+       margin-bottom: 40px;
+    }
+
+    form#tutorForm {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form#tutorForm input[type="text"],
+    form#tutorForm input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form#tutorForm button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 20px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    form#tutorForm button:hover {
+      background: linear-gradient(45deg, #4b0cb8, #9f75e8);
+      border-radius: 5px;
+    }
+
+    table {
+      width: 90%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      color: #3e0999;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    .edit-btn {
+      background-color: #28a745;
+      padding: 5px 10px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+      padding: 5px 10px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @@media (max-width: 600px) {
+      table, th, td {
+        font-size: 14px;
+      }
+    }
+    </style>
+}
+
+<h2>Tutor Management</h2>
+
+<form id="tutorForm" method="post" action="@Url.Action("Create", "Teacher")">
+    <input type="text" name="name" placeholder="Enter Tutor Name" required>
+    <input type="email" name="email" placeholder="Enter Tutor Email" required>
+    <button type="submit" id="submitBtn">Add Tutor</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Tutor Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="tutorList">
+        @if (Model != null)
+        {
+            foreach (var teacher in Model)
+            {
+                <tr>
+                    <td>@teacher.Username</td>
+                    <td>@teacher.Email</td>
+                    <td>
+                        <form method="post" action="@Url.Action("Delete", "Teacher")" style="display:inline; padding:0; box-shadow:none; background:none;">
+                            <input type="hidden" name="id" value="@teacher.Id" />
+                            <button type="submit" class="delete-btn" onclick="return confirm('Are you sure?')">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

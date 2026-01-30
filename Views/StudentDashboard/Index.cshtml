@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Student Dashboard";
+}
+
+<div class="cardBox">
+    <a href="@Url.Action("MyCourses", "Enrollment")" class="card-link">
+        <div class="card">
+            <div>
+                <div class="numbers">@ViewBag.EnrollmentCount</div>
+                <div class="cardName">My Enrollments</div>
+            </div>
+            <div class="iconBox"><ion-icon name="school-outline"></ion-icon></div>
+        </div>
+    </a>
+    <a href="@Url.Action("Index", "Course")" class="card-link">
+        <div class="card">
+            <div>
+                <div class="numbers">@ViewBag.CourseCount</div>
+                <div class="cardName">All Courses</div>
+            </div>
+            <div class="iconBox"><ion-icon name="book-outline"></ion-icon></div>
+        </div>
+    </a>
+    <a href="@Url.Action("Index", "Video")" class="card-link">
+        <div class="card">
+            <div>
+                <div class="numbers">@ViewBag.VideoCount</div>
+                <div class="cardName">Videos</div>
+            </div>
+            <div class="iconBox"><ion-icon name="logo-youtube"></ion-icon></div>
+        </div>
+    </a>
+</div>
+
+<div class="charts">
+    <div class="charts-card">
+        <h2 class="chart-heading">Learning Progress</h2>
+        <canvas id="lineChart"></canvas>
+    </div>
+    <div class="charts-card">
+        <h2 class="chart-heading">Available Courses</h2>
+        <canvas id="doughnut"></canvas>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/chart1.js"></script>
+    <script src="~/js/chart2.js"></script>
+}

@@ -1,0 +1,328 @@
+:root {
+  --blue: #287bff;
+  --white: #fff;
+  --grey: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.navigation {
+  position: fixed;
+  width: 300px;
+  height: 80%;
+  background: #300776;
+  border-left: 10px solid #300776;
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 1000;
+  left: 0;
+}
+.navigation a.active {
+  background-color: #e0f2fe;
+  color: #2563eb;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+.navigation.active {
+  width: 60px;
+}
+.navigation ul {
+  width: 100%;
+}
+.navigation ul li {
+  list-style: none;
+  border-radius: 30px 0 0 30px;
+  transition: 0.3s;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background: var(--white);
+}
+.navigation ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  padding: 10px;
+  transition: 0.3s;
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+  color: #300776;
+}
+.navigation ul li a .icon {
+  min-width: 60px;
+  text-align: center;
+  font-size: 1.5em;
+}
+.navigation ul li a .title {
+  white-space: nowrap;
+  font-size: large;
+  font-weight: 300;
+}
+/* Prevent hover background and color change */
+.navigation ul li.static-link:hover,
+.navigation ul li.static-link.hovered {
+  background: #300776; /* original background color */
+}
+
+.navigation ul li.static-link a:hover,
+.navigation ul li.static-link.hovered a {
+  color: var(--white); /* original text color */
+  cursor: default; /* show normal cursor */
+  pointer-events: none; /* disables all interaction including hover */
+}
+
+.main {
+  flex: 1;
+  margin-left: 300px;
+  width: calc(100% - 300px);
+  transition: 0.5s;
+  background: var(--white);
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.main.active {
+  margin-left: 60px;
+  width: calc(100% - 60px);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 80px;
+  background: #fff;
+  border-bottom: 2px solid #7131df;
+  box-shadow: 0 0 19px #c39dfc;
+  color: #5315be;
+}
+.toggle {
+  cursor: pointer;
+  font-size: 2.5em;
+  transition: transform 0.3s ease;
+}
+.toggle:hover {
+  transform: rotate(2deg);
+}
+ .search {
+    position: relative;
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 25px;
+  padding: 5px 10px;
+    width: 400px;
+  }
+  /* .search input {
+    width: 100%;
+    padding: 5px 20px 5px 35px;
+    height: 40px;
+    border-radius: 40px;
+    border: 1px solid #6b31cf;
+  } */
+
+  .search input {
+  border: 1px solid #6b31cf;
+  border-radius: 40px;
+  outline: none;
+  background: transparent;
+  padding-left: 30px; 
+  height: 30px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 20px;
+  font-size: 18px;
+  color: #6b31cf;
+}
+.notification {
+  font-size: 1.5em;
+  margin: 0 15px;
+  cursor: pointer;
+  color: #5315be;
+}
+.user {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ .tutors-section {
+  padding-top: 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.tutors-section h1 {
+  font-size: 2.5rem;
+  color: #4b0eb5;
+  margin-bottom: 40px;
+}
+  
+  .cards-container {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+    justify-content: center;
+  }
+  
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px #c39dfc;
+  border: 2px solid #c2a2f2;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: #f7f0ff;
+  border: 2px solid #7131df;
+  box-shadow: 0 0 12px #b07efc;
+}
+
+.card h2 {
+  color: #4b0eb5;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+  
+  .become-tutor {
+    text-align: center;
+  }
+  
+  .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #5d2bb5;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(45deg, #4b0cb8, #9f75e8);
+  }
+  
+.btn1 {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #5d2bb5;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .btn1:hover {
+    background: linear-gradient(45deg, #4b0cb8, #9f75e8);
+  }
+
+  .footer {
+    padding: 15px 0;
+    background: linear-gradient(45deg, #7234df, #ae84f8, #7e33ff);
+    color: #fff;
+    width: 100%;
+    height: 80px;
+    position: relative;
+  }
+  .footer-logo img{
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    margin-left: auto;
+    left: 100px;
+    top: 55%;
+    transform: translateY(-50%);
+  }
+  .footer-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centers the combined block */
+    gap: 20px; /* space between logo and text */
+    /* flex-wrap: wrap;*/
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-text {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: 400;
+  }  
+
+  @media (max-width: 992px){
+    .cards-container {
+      grid-template-columns: repeat(2, 1fr); /* Tablet view: 2 per row */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .cards-container {
+      grid-template-columns: 1fr; /* Mobile view: 1 per row */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navigation {
+      left: -300px;
+    }
+    .navigation.active {
+      left: 0;
+    }
+    .main {
+      left: 0;
+      width: 100%;
+    }
+    .main.active {
+      left: 300px;
+    }
+  }
